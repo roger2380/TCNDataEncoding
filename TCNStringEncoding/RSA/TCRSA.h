@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface TCRSA : NSObject
-+ (NSData*) encrypt:(NSString*) string;
-+ (NSString*) doOffset:(NSString*) string offset:(NSInteger) offset;
+
++ (NSData *)encrypt:(NSString *)string;
+
++ (NSString *)doOffset:(NSString *)string offset:(NSInteger)offset;
+
 @end

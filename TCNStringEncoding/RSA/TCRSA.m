@@ -52,10 +52,10 @@ static unsigned char _public_key_bytes[] = {
   0x24, 0x40, 0x84, 0x6f, 0xae, 0x95, 0x19, 0x7f, 0xa5, 0xb4, 0x14, 0x26, 0x7b, 0xd6, 0x0a, 0x0f, 0xf9, 0x05
 };
 
-
 static SecKeyRef _public_key=nil;
-+ (SecKeyRef) getPublicKey{ // 从公钥证书文件中获取到公钥的SecKeyRef指针
-  if(_public_key == nil){
+
++ (SecKeyRef)getPublicKey { // 从公钥证书文件中获取到公钥的SecKeyRef指针
+  if(_public_key == nil) {
     NSData *certificateData = [NSData dataWithBytes:_public_key_bytes length:758];
     SecCertificateRef myCertificate =  SecCertificateCreateWithData(kCFAllocatorDefault, (CFDataRef)certificateData);
     SecPolicyRef myPolicy = SecPolicyCreateBasicX509();
@@ -73,7 +73,7 @@ static SecKeyRef _public_key=nil;
   return _public_key;
 }
 
-+ (NSData*) encrypt:(NSString*) string{
++ (NSData *)encrypt:(NSString *)string {
   SecKeyRef key = [self getPublicKey];
   size_t cipherBufferSize = SecKeyGetBlockSize(key);
   uint8_t *cipherBuffer = malloc(cipherBufferSize * sizeof(uint8_t));
@@ -85,10 +85,9 @@ static SecKeyRef _public_key=nil;
 //  NSLog(@"[RSA encrypt] blockSize=%lu, blockCount=%ld", blockSize, blockCount);
   
   NSMutableData *encryptedData = [[[NSMutableData alloc] init] autorelease];
-  for (int i=0; i<blockCount; i++) {
+  for (int i = 0; i < blockCount; i++) {
     int bufferSize = MIN(blockSize,[stringBytes length] - i * blockSize);
     NSData *buffer = [stringBytes subdataWithRange:NSMakeRange(i * blockSize, bufferSize)];
-//    NSLog(@"encrypting buffer with size=%d", buffer.length);
     OSStatus status = SecKeyEncrypt(key, kSecPaddingPKCS1, (const uint8_t *)[buffer bytes],
                                     [buffer length], cipherBuffer, &cipherBufferSize);
     if (status == noErr){
@@ -104,7 +103,7 @@ static SecKeyRef _public_key=nil;
   return encryptedData;
 }
 
-+ (NSString*) doOffset:(NSString*) string offset:(NSInteger)offset{
++ (NSString *)doOffset:(NSString *)string offset:(NSInteger)offset {
   static char chars[] = {
     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 
     'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 
@@ -123,13 +122,13 @@ static SecKeyRef _public_key=nil;
     41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, -1, -1, -1, -1
   };
   offset = offset % 64;
-  const char* charArray = [string cStringUsingEncoding:NSUTF8StringEncoding];
-  NSInteger length = strlen(charArray)+1;
-  char* offsetedCharArray = (char*) malloc(length);
+  const char *charArray = [string cStringUsingEncoding:NSUTF8StringEncoding];
+  NSInteger length = strlen(charArray) + 1;
+  char *offsetedCharArray = (char *)malloc(length);
   bzero(offsetedCharArray, length);
-  for (NSInteger i=length-2; i>=0; i--) {
+  for (NSInteger i = length - 2; i >= 0; i--) {
     char c = charArray[i];
-    if (c=='/' || c=='+' || (c>='A' && c<='Z') || (c>='a' && c<='z') || (c>='0' && c<='9')){
+    if (c == '/' || c == '+' || (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || ( c>= '0' && c <= '9')){
       NSInteger index = indexOfChars[c] + offset;
       if (index >= 64) index -= 64;
       if (index < 0) index += 64;
@@ -138,7 +137,7 @@ static SecKeyRef _public_key=nil;
       offsetedCharArray[i] = c;
     }
   }
-  NSString* result = [NSString stringWithCString:offsetedCharArray encoding:NSUTF8StringEncoding];
+  NSString *result = [NSString stringWithCString:offsetedCharArray encoding:NSUTF8StringEncoding];
   free(offsetedCharArray);
   return result;
 }
