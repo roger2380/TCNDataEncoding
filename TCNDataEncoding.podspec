@@ -35,12 +35,6 @@ TODO: Add long description of the pod here.
     sp.requires_arc = true
     sp.public_header_files = "TCNDataEncoding/**/*.h"
   end
-
-  s.subspec 'rsa' do |sp|
-    sp.source_files  = "TCNDataEncoding/RSA/*.{h,m}"
-    sp.requires_arc = true
-    sp.public_header_files = "TCNDataEncoding/RSA/*.h"
-  end
     
   # s.resource_bundles = {
   #   'test' => ['test/Assets/*.png']
