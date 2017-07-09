@@ -6,10 +6,10 @@
 //  Copyright (c) 2012 TrueColor. All rights reserved.
 //
 
-#import "TCRSA.h"
-#import "Base64.h"
+#import "TCNRSA.h"
+#import "TCNBase64.h"
 
-@implementation TCRSA
+@implementation TCNRSA
 
 static unsigned char _public_key_bytes[] = {
   0x30, 0x82, 0x02, 0xf2, 0x30, 0x82, 0x02, 0x5b, 0xa0, 0x03, 0x02, 0x01, 0x02, 0x02, 0x09, 0x00, 0x9e, 0xf0, 0x12, 0xae, 
@@ -84,7 +84,7 @@ static SecKeyRef _public_key=nil;
 //  NSLog(@"[RSA encrypt] cipherBufferSize=%lu", cipherBufferSize);
 //  NSLog(@"[RSA encrypt] blockSize=%lu, blockCount=%ld", blockSize, blockCount);
   
-  NSMutableData *encryptedData = [[[NSMutableData alloc] init] autorelease];
+  NSMutableData *encryptedData = [[NSMutableData alloc] init];
   for (int i = 0; i < blockCount; i++) {
     int bufferSize = MIN(blockSize,[stringBytes length] - i * blockSize);
     NSData *buffer = [stringBytes subdataWithRange:NSMakeRange(i * blockSize, bufferSize)];
@@ -93,7 +93,6 @@ static SecKeyRef _public_key=nil;
     if (status == noErr){
       NSData *encryptedBytes = [[NSData alloc] initWithBytes:(const void *)cipherBuffer length:cipherBufferSize];
       [encryptedData appendData:encryptedBytes];
-      [encryptedBytes release];
     }else{
       if (cipherBuffer) free(cipherBuffer);
       return nil;

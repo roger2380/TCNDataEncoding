@@ -6,17 +6,16 @@
 //  Copyright 2010 ObjectGraph LLC. All rights reserved.
 //
 
-#import "Base64.h"
+#import "TCNBase64.h"
 
-
-@implementation Base64
+@implementation TCNBase64
 #define ArrayLength(x) (sizeof(x)/sizeof(*(x)))
 
 static char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 static char decodingTable[128];
 
 + (void)initialize {
-	if (self == [Base64 class]) {
+	if (self == [TCNBase64 class]) {
 		memset(decodingTable, 0, ArrayLength(decodingTable));
 		for (NSInteger i = 0; i < ArrayLength(encodingTable); i++) {
 			decodingTable[encodingTable[i]] = i;
@@ -44,8 +43,8 @@ static char decodingTable[128];
         output[index + 2] = (i + 1) < length ? encodingTable[(value >> 6)  & 0x3F] : '=';
         output[index + 3] = (i + 2) < length ? encodingTable[(value >> 0)  & 0x3F] : '=';
     }
-    return [[[NSString alloc] initWithData:data
-                                  encoding:NSASCIIStringEncoding] autorelease];
+    return [[NSString alloc] initWithData:data
+                                  encoding:NSASCIIStringEncoding];
 }
 
 + (NSString *)encode:(NSData *)rawBytes {

@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B223E0ED1F0DE2E7002DDDD3"
-               BuildableName = "libTCNDataCommon.a"
-               BlueprintName = "TCNDataCommon"
-               ReferencedContainer = "container:TCNStringEncoding.xcodeproj">
+               BlueprintIdentifier = "B284F3251F0F331F003178F8"
+               BuildableName = "libTCNDataEncoding.a"
+               BlueprintName = "TCNDataEncoding"
+               ReferencedContainer = "container:TCNDataEncoding.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B223E0ED1F0DE2E7002DDDD3"
-            BuildableName = "libTCNDataCommon.a"
-            BlueprintName = "TCNDataCommon"
-            ReferencedContainer = "container:TCNStringEncoding.xcodeproj">
+            BlueprintIdentifier = "B284F3251F0F331F003178F8"
+            BuildableName = "libTCNDataEncoding.a"
+            BlueprintName = "TCNDataEncoding"
+            ReferencedContainer = "container:TCNDataEncoding.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -63,10 +63,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B223E0ED1F0DE2E7002DDDD3"
-            BuildableName = "libTCNDataCommon.a"
-            BlueprintName = "TCNDataCommon"
-            ReferencedContainer = "container:TCNStringEncoding.xcodeproj">
+            BlueprintIdentifier = "B284F3251F0F331F003178F8"
+            BuildableName = "libTCNDataEncoding.a"
+            BlueprintName = "TCNDataEncoding"
+            ReferencedContainer = "container:TCNDataEncoding.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

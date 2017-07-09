@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B284F3251F0F331F003178F8"
-               BuildableName = "libTCNStringEncoding.a"
-               BlueprintName = "TCNStringEncoding"
-               ReferencedContainer = "container:TCNStringEncoding.xcodeproj">
+               BuildableName = "libTCNDataEncoding.a"
+               BlueprintName = "TCNDataEncoding"
+               ReferencedContainer = "container:TCNDataEncoding.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B284F3251F0F331F003178F8"
-            BuildableName = "libTCNStringEncoding.a"
-            BlueprintName = "TCNStringEncoding"
-            ReferencedContainer = "container:TCNStringEncoding.xcodeproj">
+            BuildableName = "libTCNDataEncoding.a"
+            BlueprintName = "TCNDataEncoding"
+            ReferencedContainer = "container:TCNDataEncoding.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -64,9 +64,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B284F3251F0F331F003178F8"
-            BuildableName = "libTCNStringEncoding.a"
-            BlueprintName = "TCNStringEncoding"
-            ReferencedContainer = "container:TCNStringEncoding.xcodeproj">
+            BuildableName = "libTCNDataEncoding.a"
+            BlueprintName = "TCNDataEncoding"
+            ReferencedContainer = "container:TCNDataEncoding.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

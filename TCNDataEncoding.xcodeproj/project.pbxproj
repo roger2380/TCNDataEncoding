@@ -6,6 +6,12 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B2B5A98B1F0F68FC00F63844 /* TCNBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B5A9841F0F68FC00F63844 /* TCNBase64.m */; };
+		B2B5A98C1F0F68FC00F63844 /* TCNRSA.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B5A9871F0F68FC00F63844 /* TCNRSA.m */; };
+		B2B5A98D1F0F68FC00F63844 /* TCNNSString+UrlEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B5A98A1F0F68FC00F63844 /* TCNNSString+UrlEncode.m */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		B284F3241F0F331F003178F8 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -19,13 +25,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B284F3261F0F331F003178F8 /* libTCNStringEncoding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTCNStringEncoding.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B284F3311F0F33A7003178F8 /* Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
-		B284F3321F0F33A7003178F8 /* Base64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
-		B284F3341F0F33A7003178F8 /* TCRSA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCRSA.h; sourceTree = "<group>"; };
-		B284F3351F0F33A7003178F8 /* TCRSA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCRSA.m; sourceTree = "<group>"; };
-		B284F3391F0F33A7003178F8 /* NSString+UrlEncode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+UrlEncode.h"; sourceTree = "<group>"; };
-		B284F33A1F0F33A7003178F8 /* NSString+UrlEncode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+UrlEncode.m"; sourceTree = "<group>"; };
+		B284F3261F0F331F003178F8 /* libTCNDataEncoding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTCNDataEncoding.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2B5A9831F0F68FC00F63844 /* TCNBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCNBase64.h; sourceTree = "<group>"; };
+		B2B5A9841F0F68FC00F63844 /* TCNBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCNBase64.m; sourceTree = "<group>"; };
+		B2B5A9861F0F68FC00F63844 /* TCNRSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCNRSA.h; sourceTree = "<group>"; };
+		B2B5A9871F0F68FC00F63844 /* TCNRSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCNRSA.m; sourceTree = "<group>"; };
+		B2B5A9891F0F68FC00F63844 /* TCNNSString+UrlEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TCNNSString+UrlEncode.h"; sourceTree = "<group>"; };
+		B2B5A98A1F0F68FC00F63844 /* TCNNSString+UrlEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TCNNSString+UrlEncode.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +48,7 @@
 		B223E0E51F0DE2E7002DDDD3 = {
 			isa = PBXGroup;
 			children = (
-				B284F32F1F0F33A7003178F8 /* TCNStringEncoding */,
+				B2B5A9811F0F68FC00F63844 /* TCNDataEncoding */,
 				B223E0EF1F0DE2E7002DDDD3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,44 +56,44 @@
 		B223E0EF1F0DE2E7002DDDD3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B284F3261F0F331F003178F8 /* libTCNStringEncoding.a */,
+				B284F3261F0F331F003178F8 /* libTCNDataEncoding.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B284F32F1F0F33A7003178F8 /* TCNStringEncoding */ = {
+		B2B5A9811F0F68FC00F63844 /* TCNDataEncoding */ = {
 			isa = PBXGroup;
 			children = (
-				B284F3301F0F33A7003178F8 /* Base64 */,
-				B284F3331F0F33A7003178F8 /* RSA */,
-				B284F3381F0F33A7003178F8 /* UrlEncode */,
+				B2B5A9821F0F68FC00F63844 /* Base64 */,
+				B2B5A9851F0F68FC00F63844 /* RSA */,
+				B2B5A9881F0F68FC00F63844 /* UrlEncode */,
 			);
-			path = TCNStringEncoding;
+			path = TCNDataEncoding;
 			sourceTree = "<group>";
 		};
-		B284F3301F0F33A7003178F8 /* Base64 */ = {
+		B2B5A9821F0F68FC00F63844 /* Base64 */ = {
 			isa = PBXGroup;
 			children = (
-				B284F3311F0F33A7003178F8 /* Base64.h */,
-				B284F3321F0F33A7003178F8 /* Base64.m */,
+				B2B5A9831F0F68FC00F63844 /* TCNBase64.h */,
+				B2B5A9841F0F68FC00F63844 /* TCNBase64.m */,
 			);
 			path = Base64;
 			sourceTree = "<group>";
 		};
-		B284F3331F0F33A7003178F8 /* RSA */ = {
+		B2B5A9851F0F68FC00F63844 /* RSA */ = {
 			isa = PBXGroup;
 			children = (
-				B284F3341F0F33A7003178F8 /* TCRSA.h */,
-				B284F3351F0F33A7003178F8 /* TCRSA.m */,
+				B2B5A9861F0F68FC00F63844 /* TCNRSA.h */,
+				B2B5A9871F0F68FC00F63844 /* TCNRSA.m */,
 			);
 			path = RSA;
 			sourceTree = "<group>";
 		};
-		B284F3381F0F33A7003178F8 /* UrlEncode */ = {
+		B2B5A9881F0F68FC00F63844 /* UrlEncode */ = {
 			isa = PBXGroup;
 			children = (
-				B284F3391F0F33A7003178F8 /* NSString+UrlEncode.h */,
-				B284F33A1F0F33A7003178F8 /* NSString+UrlEncode.m */,
+				B2B5A9891F0F68FC00F63844 /* TCNNSString+UrlEncode.h */,
+				B2B5A98A1F0F68FC00F63844 /* TCNNSString+UrlEncode.m */,
 			);
 			path = UrlEncode;
 			sourceTree = "<group>";
@@ -95,9 +101,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B284F3251F0F331F003178F8 /* TCNStringEncoding */ = {
+		B284F3251F0F331F003178F8 /* TCNDataEncoding */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B284F32C1F0F331F003178F8 /* Build configuration list for PBXNativeTarget "TCNStringEncoding" */;
+			buildConfigurationList = B284F32C1F0F331F003178F8 /* Build configuration list for PBXNativeTarget "TCNDataEncoding" */;
 			buildPhases = (
 				B284F3221F0F331F003178F8 /* Sources */,
 				B284F3231F0F331F003178F8 /* Frameworks */,
@@ -107,9 +113,9 @@
 			);
 			dependencies = (
 			);
-			name = TCNStringEncoding;
+			name = TCNDataEncoding;
 			productName = TCNStringEncoding;
-			productReference = B284F3261F0F331F003178F8 /* libTCNStringEncoding.a */;
+			productReference = B284F3261F0F331F003178F8 /* libTCNDataEncoding.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -128,7 +134,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B223E0E91F0DE2E7002DDDD3 /* Build configuration list for PBXProject "TCNStringEncoding" */;
+			buildConfigurationList = B223E0E91F0DE2E7002DDDD3 /* Build configuration list for PBXProject "TCNDataEncoding" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -140,7 +146,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B284F3251F0F331F003178F8 /* TCNStringEncoding */,
+				B284F3251F0F331F003178F8 /* TCNDataEncoding */,
 			);
 		};
 /* End PBXProject section */
@@ -150,6 +156,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2B5A98B1F0F68FC00F63844 /* TCNBase64.m in Sources */,
+				B2B5A98C1F0F68FC00F63844 /* TCNRSA.m in Sources */,
+				B2B5A98D1F0F68FC00F63844 /* TCNNSString+UrlEncode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +259,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = X85J8N9XQ5;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -261,7 +270,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = X85J8N9XQ5;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -271,7 +280,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B223E0E91F0DE2E7002DDDD3 /* Build configuration list for PBXProject "TCNStringEncoding" */ = {
+		B223E0E91F0DE2E7002DDDD3 /* Build configuration list for PBXProject "TCNDataEncoding" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B223E0F51F0DE2E7002DDDD3 /* Debug */,
@@ -280,7 +289,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B284F32C1F0F331F003178F8 /* Build configuration list for PBXNativeTarget "TCNStringEncoding" */ = {
+		B284F32C1F0F331F003178F8 /* Build configuration list for PBXNativeTarget "TCNDataEncoding" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B284F32D1F0F331F003178F8 /* Debug */,

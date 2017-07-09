@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TCRSA : NSObject
+@interface TCNRSA : NSObject
 
 + (NSData *)encrypt:(NSString *)string;
 
