@@ -34,6 +34,7 @@ TODO: Add long description of the pod here.
     sp.source_files  = "TCNDataEncoding/**/*.{h,m}"
     sp.requires_arc = true
     sp.public_header_files = "TCNDataEncoding/**/*.h"
+    sp.libraries    = "z"
   end
     
   # s.resource_bundles = {
