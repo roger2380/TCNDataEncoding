@@ -64,17 +64,9 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B27BFCE61F27498400E12793 /* JSONKit */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = JSONKit;
-			sourceTree = "<group>";
-		};
 		B2B5A9811F0F68FC00F63844 /* TCNDataEncoding */ = {
 			isa = PBXGroup;
 			children = (
-				B27BFCE61F27498400E12793 /* JSONKit */,
 				CB8ADDBA1F13552B004B18EC /* Gzip */,
 				B2B5A9821F0F68FC00F63844 /* Base64 */,
 				B2B5A9851F0F68FC00F63844 /* RSA */,
