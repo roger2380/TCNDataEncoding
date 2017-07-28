@@ -11,6 +11,7 @@
 		B2B5A98C1F0F68FC00F63844 /* TCNRSA.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B5A9871F0F68FC00F63844 /* TCNRSA.m */; };
 		B2B5A98D1F0F68FC00F63844 /* TCNNSString+UrlEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B5A98A1F0F68FC00F63844 /* TCNNSString+UrlEncode.m */; };
 		CB8ADDBD1F135563004B18EC /* NSData+TCNGzip.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8ADDBC1F135563004B18EC /* NSData+TCNGzip.m */; };
+		CBB28D6A1F289F580090BC20 /* NSString+JavaScriptString.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB28D691F289F580090BC20 /* NSString+JavaScriptString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,8 @@
 		B2B5A98A1F0F68FC00F63844 /* TCNNSString+UrlEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TCNNSString+UrlEncode.m"; sourceTree = "<group>"; };
 		CB8ADDBB1F135563004B18EC /* NSData+TCNGzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+TCNGzip.h"; path = "TCNDataEncoding/Gzip/NSData+TCNGzip.h"; sourceTree = SOURCE_ROOT; };
 		CB8ADDBC1F135563004B18EC /* NSData+TCNGzip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+TCNGzip.m"; path = "TCNDataEncoding/Gzip/NSData+TCNGzip.m"; sourceTree = SOURCE_ROOT; };
+		CBB28D681F289F580090BC20 /* NSString+JavaScriptString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JavaScriptString.h"; sourceTree = "<group>"; };
+		CBB28D691F289F580090BC20 /* NSString+JavaScriptString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JavaScriptString.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,7 @@
 		B2B5A9811F0F68FC00F63844 /* TCNDataEncoding */ = {
 			isa = PBXGroup;
 			children = (
+				CBB28D671F289F150090BC20 /* JavaScriptString */,
 				CB8ADDBA1F13552B004B18EC /* Gzip */,
 				B2B5A9821F0F68FC00F63844 /* Base64 */,
 				B2B5A9851F0F68FC00F63844 /* RSA */,
@@ -110,6 +114,15 @@
 			);
 			name = Gzip;
 			path = UrlEncode;
+			sourceTree = "<group>";
+		};
+		CBB28D671F289F150090BC20 /* JavaScriptString */ = {
+			isa = PBXGroup;
+			children = (
+				CBB28D681F289F580090BC20 /* NSString+JavaScriptString.h */,
+				CBB28D691F289F580090BC20 /* NSString+JavaScriptString.m */,
+			);
+			path = JavaScriptString;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +185,7 @@
 			files = (
 				CB8ADDBD1F135563004B18EC /* NSData+TCNGzip.m in Sources */,
 				B2B5A98B1F0F68FC00F63844 /* TCNBase64.m in Sources */,
+				CBB28D6A1F289F580090BC20 /* NSString+JavaScriptString.m in Sources */,
 				B2B5A98C1F0F68FC00F63844 /* TCNRSA.m in Sources */,
 				B2B5A98D1F0F68FC00F63844 /* TCNNSString+UrlEncode.m in Sources */,
 			);
