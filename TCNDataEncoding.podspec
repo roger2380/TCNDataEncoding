@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
   一些数据编解码,压缩解压,格式处理相关的工具方法
                        DESC
 
-  s.homepage         = 'ssh://git@git.1kxun.com:9922/ios/TCNDataEncoding.git'
+  s.homepage         = 'ssh://git@git.1kxun.com/ios/TCNDataEncoding.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '唐艺源' => 'tyy@shtruecolor.com' }
-  s.source           = { :git => 'ssh://git@git.1kxun.com:9922/ios/TCNDataEncoding.git', :tag => s.version.to_s }
+  s.source           = { :git => 'ssh://git@git.1kxun.com/ios/TCNDataEncoding.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
